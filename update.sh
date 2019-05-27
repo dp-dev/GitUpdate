@@ -11,6 +11,7 @@ do
 		echo "Current branch: $CURRENT_BRANCH"
 		if [ "$CURRENT_BRANCH" = "$BRANCH_UPDATE_NAME" ]; then
 			echo ">> UPDATE ONGOING"
+			$(git checkout .)
 			echo $(git pull)
 			echo ">> UPDATE DONE"
 		else
